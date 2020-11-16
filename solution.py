@@ -101,4 +101,5 @@ def ping(host, timeout=1):
         time.sleep(1)# one second
     return delay
 
+if __name__ == '__main__':
 ping("127.0.0.1")
