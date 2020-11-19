@@ -81,7 +81,7 @@ def sendOnePing(mySocket, destAddr, ID):
 def doOnePing(destAddr, timeout):         
     icmp = getprotobyname("icmp") 
     #Create Socket here
-    mySocket = socket(AF_INET, SOCK_DGRAM, icmp) 
+    mySocket = socket(AF_INET, SOCK_RAW, icmp) 
 
     myID = os.getpid() & 0xFFFF  #Return the current process i     
     sendOnePing(mySocket, destAddr, myID) 
